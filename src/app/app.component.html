@@ -1,0 +1,19 @@
+<hello name="{{ this.myUser.name }}"></hello>
+<div *ngIf="!this.isuserloggedin()">
+	<div>
+		User : <input [(ngModel)] = "this.myUser.name"  type="text"  >
+  </div>
+
+		<div>
+			Password : <input [(ngModel)] = "this.myUser.password" type="password"  >
+</div>
+			<div>
+				<button (click)="this.login()" > Login </button>
+
+			</div>
+		</div>
+
+
+		<div *ngIf="this.isuserloggedin()">
+			<button (click)="this.logout()" > Logout </button>
+		</div>
